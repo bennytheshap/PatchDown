@@ -95,15 +95,12 @@ class World
   def run
     puts "Running!"
     setup
+    puts dump.inspect 
+
     4.times do |t|
       tick
+      puts dump_dirty.inspect
     end
-    
-    puts dump.inspect 
-    tick
-    puts dump_dirty.inspect
-    tick
-    puts dump_dirty.inspect
   end  
 end
 

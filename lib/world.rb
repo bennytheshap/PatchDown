@@ -32,10 +32,14 @@ class World
   end
 
   def setup
-    x = 10
-    y = 10
+    make_turtle_at(2,2)
+    make_turtle_at(3,2)
+    make_turtle_at(2,1)
+  end
+  
+  def make_turtle_at(x,y)
     patch = patch_for_coordinate(x, y)
-    turtle = Circler.new(x,y,patch,self)
+    turtle = Turtle.new(x,y,patch,self)
   end
   
   def tick

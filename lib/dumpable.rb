@@ -17,4 +17,5 @@ module Dumpable
     end
     return ret
   end
+  
 end

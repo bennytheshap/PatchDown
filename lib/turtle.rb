@@ -48,4 +48,9 @@ class Turtle<LocativeAgent
     @world.turtle_destroyed self
   end
   
+  def turtles_within_radius(radius)
+    ret = @patch.turtles_within_radius(radius)
+    ret.delete(self)
+    return ret
+  end  
 end
